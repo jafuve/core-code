@@ -1,6 +1,16 @@
 # Week challenges 💻
 ---
-
+Thursday 2022-01-13
+---
+1. Search for real word applications of Javascript
+~~~
+JavaScript is used in: Web development, web applications, presentations, Server applications, Web servers, 
+games, art, smartwatch applications, mobile applications, robots.
+~~~
+2. Follow the github course, you can find it here
+~~~
+STARTED
+~~~
 Wednesday 2022-01-12
 ---
 1. Learn about binary, decimal and hexadecimal numbers

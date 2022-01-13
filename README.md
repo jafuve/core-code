@@ -1,6 +1,99 @@
 # Week challenges 💻
 ---
 
+Wednesday 2022-01-12
+---
+1. Learn about binary, decimal and hexadecimal numbers
+~~~
+DONE
+~~~
+2. Translate the year you where born to binary, decimal and hexadecimal
+~~~
+Birthyear. 1992 
+Binary = 11111001000
+Decimal = 1992
+Hexadecimal = 7C8
+~~~
+3. Translate 51966 into hexadecimal and binary
+~~~
+Binary = 1100101011111110
+Hexadecimal = CAFE
+~~~
+4. Use a Low-level language, for example MIPS aseembler
+~~~
+DONE
+~~~
+5.1 Create a program to add two numbers given by the user
+~~~
+.data
+	number1: .asciiz "\nInput first number: "
+	number2: .asciiz "\nImput second number: "
+	result_message: .asciiz "\nThe result of the sum is: "
+.text
+	main:
+		li $v0, 4
+		la $a0, number1
+		syscall
+
+		li $v0, 5
+		syscall
+
+		move $t0, $v0
+
+		li $v0, 4
+		la $a0, number2
+		syscall
+		
+		li $v0, 5
+		syscall
+		
+		move $t1, $v0
+		
+		add $t2, $t0, $t1
+
+		li $v0, 4
+		la $a0 result_message
+		syscall
+
+		li $v0, 1
+		move $a0, $t2
+		syscall
+~~~
+5.2 Create a program that display your name
+~~~
+.data
+    buffer: .space 20
+    str1:  .asciiz "Enter your name:\n"
+    str2:  .asciiz "Your name is:\n"
+
+.text
+
+main:
+    la $a0, str1   
+    li $v0, 4
+    syscall
+
+    li $v0, 8       
+
+    la $a0, buffer  
+    li $a1, 20      
+
+    move $t0, $a0   
+    syscall
+
+    la $a0, str2    
+    li $v0, 4
+    syscall
+
+    la $a0, buffer  
+    move $a0, $t0   
+    li $v0, 4       
+    syscall
+
+    li $v0, 10      
+    syscall
+~~~
+
 Tuesday 2022-01-11
 ---
 1. Watch this video about compilation and interpretation.

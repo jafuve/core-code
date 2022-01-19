@@ -1,6 +1,55 @@
 # Week challenges - Week02 💻
 ---
-Tuestay 2022-01-18
+Wednesday 2022-01-19
+---
+1. http
+~~~
+function dutyFree(normPrice, discount, hol){
+  return Math.floor( hol / ( normPrice * (discount / 100) ) );
+}
+~~~
+2. http
+~~~
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let tempDadAge = dadYearsOld;
+  let tempSonAge = sonYearsOld;
+  let years = 0, i = 0;
+  while(true || years == 200){
+    if(tempDadAge / 2 == tempSonAge ){
+      years = i;
+      break;
+    }else{
+      tempDadAge++;
+      tempSonAge++;
+    }
+    i++;
+  }
+  return years;
+}
+~~~
+3. http
+~~~
+function validSpacing(s) {
+  
+  if( s.includes('  ') || s[0] == ' ' || s[s.length-1] == ' ' )
+    return is_valid = false;
+  
+  return true;
+}
+~~~
+4. http
+~~~
+function fakeBin(x){
+  let fakebin = "";
+  
+  for(let i = 0; i < x.length; i++){
+    fakebin += (Number(x[i]) < 5) ? "0" : "1";
+  }
+    return fakebin;
+}
+~~~
+---
+Tuesday 2022-01-18
 ---
 1. https://www.codewars.com/kata/50654ddff44f800200000004
 ~~~

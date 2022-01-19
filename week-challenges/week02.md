@@ -1,6 +1,6 @@
 # Week challenges - Week02 💻
 ---
-Tuestad 2022-01-18
+Tuestay 2022-01-18
 ---
 1. https://www.codewars.com/kata/50654ddff44f800200000004
 ~~~
@@ -17,6 +17,34 @@ function uniTotal (string) {
     uniTotal += Number( string.charCodeAt(i) );
   }
   return uniTotal;
+}
+~~~
+3. https://www.codewars.com/kata/55ad04714f0b468e8200001c
+~~~
+function getChar(c){
+  return String.fromCharCode(c);
+}
+~~~
+4. https://www.codewars.com/kata/551f37452ff852b7bd000139
+~~~
+function addBinary(a,b) {
+  const addition = a + b;
+  return Number(addition).toString(2);
+}
+~~~
+5. https://www.codewars.com/kata/5ad0d8356165e63c140014d4
+~~~
+function finalGrade (exam, projects) {
+  let final_grade = 0;
+  
+  if(exam > 90 || projects > 10)
+    final_grade = 100;
+  else if(exam > 75 && projects >= 5)
+    final_grade = 90;
+  else if(exam > 50 && projects >= 2)
+    final_grade = 75;
+  
+  return final_grade;
 }
 ~~~
 Monday 2022-01-17

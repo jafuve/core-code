@@ -1,5 +1,59 @@
 # Week challenges - Week02 💻
 ---
+Thursday 2922-01-20
+
+1. http
+~~~
+function remove (string) {  
+  
+ return string = ( string[0] == "!" ) 
+          ? string[0] + string.slice(1).replace("!", "")
+          : string.replace("!", "");
+  
+}
+~~~
+2. http
+~~~
+function shortcut (string) {
+  return string.replace(/[aeiou]/ig,'');
+}
+~~~
+3. http
+~~~
+const rps = (p1, p2) => {
+  if(p1 == p2)
+    return 'Draw!';
+  else if(p1 == 'rock' && p2 == 'scissors')
+    return 'Player 1 won!';
+  else if(p1 == 'rock' && p2 == 'paper')
+    return 'Player 2 won!';
+  else if(p1 == 'scissors' && p2 == 'rock')
+    return 'Player 2 won!';
+  else if(p1 == 'scissors' && p2 == 'paper')
+    return 'Player 1 won!';
+  else if(p1 == 'paper' && p2 == 'rock')
+    return 'Player 1 won!';
+  else if(p1 == 'paper' && p2 == 'scissors')
+    return 'Player 2 won!';
+};
+~~~
+4. http
+~~~
+function persistence(num) {
+  function multiply(n){
+    return n.reduce(function(a,b){return a*b;});
+  }
+  var count =0; 
+    
+  while(num.toString().length > 1) {
+    num= num.toString().split("");
+    num = multiply(num);
+    count++;
+  }
+  return count;
+}
+~~~
+---
 Wednesday 2022-01-19
 ---
 1. http

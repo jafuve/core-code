@@ -4,12 +4,14 @@ Thursday 2922-01-20
 
 1. http
 ~~~
-function remove (string) {  
-  
- return string = ( string[0] == "!" ) 
-          ? string[0] + string.slice(1).replace("!", "")
-          : string.replace("!", "");
-  
+function remove(s){
+let arr =[]
+  for (let i = s.length-1; i => 0; i--){
+    if(s[i] != '!'){
+      arr.push(s.slice(0,i+1));
+      return arr.join('');
+    }  
+  }
 }
 ~~~
 2. http

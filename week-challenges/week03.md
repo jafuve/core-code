@@ -1,5 +1,34 @@
 # Week challenges - Week03 💻
 ---
+Tuesday 2022-01-24
+1. You order, please
+~~~
+function order(words){
+   return words.split(' ')
+                .sort(function(a,b){
+                        return a.match(/\d/) - b.match(/\d/);
+                }).join(' ');
+}
+~~~
+2. Duplicate count
+~~~
+function duplicateCount(text){
+   return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
+~~~
+3. 
+Simple Pig Latin
+~~~
+function pigIt(str){
+  const a1 = str.split(' ');
+  var regP = /[,!?@#$%^&*()\u9999]/;
+  return a1.map(x => 
+                ( x.match(regP) )
+                ? x 
+                : (x.substring(1, x.length) + x.substring(0, 1)) + "ay"
+               ).join(' ');
+}
+~~~
 Monday 2922-01-24
 
 1. Who likes it

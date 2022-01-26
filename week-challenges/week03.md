@@ -1,5 +1,82 @@
 # Week challenges - Week03 💻
 ---
+- Wednesday 2022-01-25
+1. Fold an Array
+~~~
+function foldArray(array, runs)
+{
+  let r = [];
+  let array2 = [...array];
+  
+  for(let i = 0; i < runs; i++){
+    
+    let res = [];
+    
+    while(array2.length > 0){
+
+      if(array2.length === 1){
+        res.push(array2[0]);
+        array2.shift();
+        
+      }else{
+        res.push( Number(array2[0]) + Number(array2[ array2.length-1 ]));
+        array2.shift();
+        array2.pop();
+      }
+      
+    }
+
+    array2 = res;
+    r = res;
+    
+  }
+    
+  return r;
+}
+~~~
+2. Convert string to camel case
+~~~
+function toCamelCase(str){
+ function isUpperCase(str) {
+    for (var i = 0, len = str.length; i < len; i++) {
+        var letter = str.charAt(i);
+        var keyCode = letter.charCodeAt(i);
+        if (keyCode > 96 && keyCode < 123) {
+            return false;
+        }
+    }
+
+    return true;
+}
+  
+  let copy = str;
+  let res = copy.split(/_|-/)
+            .map( str => str.charAt(0).toUpperCase() + str.slice(1) )
+            .join('');
+  
+  return ( isUpperCase(str.charAt(0)) )
+          ? res 
+          :  res.charAt(0).toLowerCase() + res.slice(1);
+}
+~~~
+3. Unique in Order
+~~~
+var uniqueInOrder=function(iterable){
+  let res = [];
+  
+  let newArray = (typeof(iterable) == "string") ? Array.from(iterable) : iterable;
+  
+  let c = "";
+  for(let i = 0; i < newArray.length; i++){
+      if(c != newArray[i]){
+        res.push(newArray[i]);
+        c = newArray[i];
+      }
+  }
+  
+  return (newArray.length == 1) ? newArray : res;
+}
+~~~
 Tuesday 2022-01-24
 1. You order, please
 ~~~

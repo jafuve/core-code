@@ -1,7 +1,7 @@
 # Week challenges - Week03 💻
 ---
 
-- Tuesday 2022-01-25
+- Thursday 2022-01-25
 1. Fold an Array
 ~~~
 function foldArray(array, runs)
@@ -35,7 +35,22 @@ function foldArray(array, runs)
   return r;
 }
 ~~~
-
+2. Encrypt this
+~~~
+var encryptThis = function(text) {
+ return text.split(' ')
+  .map(word => word
+  .replace(/(^\w)(\w)(\w*)(\w$)/, `$1$4$3$2`)
+  .replace(/^\w/, word.charCodeAt(0)))
+  .join(' ');
+}
+~~~
+3.Format a string of names like 'Bart, Lisa & Maggie'. (retired)
+~~~
+function list(names){
+  return names.map(x => x.name).join(', ').replace(/, ([^,]*)$/, ' & $1');
+}
+~~~
 - Wednesday 2022-01-25
 
 1. Valid Parentheses

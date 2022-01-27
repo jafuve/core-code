@@ -1,6 +1,7 @@
 # Week challenges - Week03 💻
 ---
-- Wednesday 2022-01-25
+
+- Tuesday 2022-01-25
 1. Fold an Array
 ~~~
 function foldArray(array, runs)
@@ -34,6 +35,30 @@ function foldArray(array, runs)
   return r;
 }
 ~~~
+
+- Wednesday 2022-01-25
+
+1. Valid Parentheses
+~~~
+function validParentheses(parens) {
+  let brackets = "[]{}()<>"
+  let stack = []
+
+  for(let bracket of parens) {
+    let bracketsIndex = brackets.indexOf(bracket)
+
+    if(bracketsIndex % 2 === 0) {
+      stack.push(bracketsIndex + 1)
+    } else {
+      if(stack.pop() !== bracketsIndex) {
+        return false;
+      }
+    }
+  }
+  return stack.length === 0
+}
+~~~
+
 2. Convert string to camel case
 ~~~
 function toCamelCase(str){

@@ -1,8 +1,40 @@
 # Week challenges - Week04 💻
 ---
-
+- Wednesday 2022-02-02
+1. Array.diff
+~~~
+function arrayDiff(a, b) {
+  return a.filter(x => !b.includes(x));
+}
+~~~
+2. Create Phone Number
+~~~
+function createPhoneNumber(numbers){
+  return numbers.join('').replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+}
+~~~
+3. Watch this
+~~~
+DONE
+~~~
+4. Watch this
+~~~
+DONE
+~~~
+5. Read this
+~~~
+DONE
+~~~
+6. Read this
+~~~
+DONE
+~~~
+7. Read this
+~~~
+DONE
+~~~
 - Tuesday 2022-02-01
-1. This link is nice to have and read
+9. This link is nice to have and read
 ~~~
 DONE
 ~~~

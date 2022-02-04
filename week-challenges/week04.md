@@ -1,7 +1,65 @@
 # Week challenges - Week04 💻
 ---
+- Thursday 2022-02-03
+1. Detect Pangram
+~~~
+function isPangram(string){
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz"
+    .split("").every(function(x){
+      return string.indexOf(x) !== -1;
+  });
+}
+~~~
+2. Find the missing letter
+~~~
+function findMissingLetter(array)
+{
+  const str = "abcdefghijklmnopqrstuvwxyz";
+  const str2arr = array.join("");
+  for (var i = 0; i < str2arr.length; i++) {
+    if (str2arr.charCodeAt(i + 1) - str2arr.charCodeAt(i) != 1) {
+      return String.fromCharCode(str2arr.charCodeAt(i) + 1);
+    }
+  } 
+}
+~~~
+3. Find the unique number
+~~~
+function findUniq(arr) {
+  const x = arr.filter((elm) => elm === arr[0]);
+  const y = arr.filter((elm) => elm !== arr[0]);
+  
+  return x.length > y.length ? y[0] : x[0]
+}
+~~~
+4. Reverse or rotate?
+~~~
+function revrot(str, sz) {
+     ln = str.length;
+   if(sz < 1 || !str || sz > ln) return "";
+
+   const test = s => Array.prototype.reduce.call(s, (acc, val) => acc + Number(val) ** 3, 0) % 2 === 0;
+   const reverse = s => s.split("").reverse().join("");
+   const rotate = s => s.slice(1) + s.slice(0, 1);
+
+   let arr = [];
+   for(let i = 0; i < ln; i += sz) arr.push(i+sz <= ln ? str.slice(i, i+sz) : "")
+   return arr.map(x => test(x) ? reverse(x) : rotate(x)).join("");
+}
+~~~
+5. What's Your Poison?
+~~~
+function find(rats) {
+    let res = 0;
+    for(let i = 0; i < rats.length; i++){
+      res += Math.pow(2, rats[i]);
+    }
+  return res;
+}
+~~~
 - Wednesday 2022-02-02
-1. Array.diff
+7. Array.diff
 ~~~
 function arrayDiff(a, b) {
   return a.filter(x => !b.includes(x));

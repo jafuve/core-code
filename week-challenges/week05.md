@@ -1,7 +1,98 @@
 # Week challenges - Week05 💻
 ---
+- Thursday 2022-02-09
+1. Tile Using Typescript
+~~~
+class Tile{
+  value: number;
+  letter: string;
+
+  constructor(letter : string, value: number){
+    this.value = value;
+    this.letter = letter;
+  }
+
+  printTile(){
+    console.log(`
+      ==================
+        Letter: ${ this.letter }
+        Value: ${ this.value }
+      ==================`);
+  }//END FUNCTION
+
+}
+~~~
+2. Time Using Typescript
+~~~
+class Time {
+  hour : number;
+  minute : number;
+  seconds : number;
+
+  constructor(hour:number, minute:number, seconds:number){
+    this.hour = hour;
+    this.minute = minute;
+    this.seconds = seconds;
+  }
+
+  printTime(){
+    console.log(`
+      ==================
+        Hours: ${ this.hour }
+        Minutes: ${ this.minute  }
+        Seconds: ${ this.seconds }
+      ==================
+    `);
+  }
+
+  getInSeconds() : number{
+    const minutes  = this.hour * 60 + this.minute;
+    return minutes * 60 + this.seconds;
+  }
+}
+~~~
+3. Rational Using Typescript
+~~~
+class Rational{
+
+  numerator : number;
+  denominator : number;
+
+  constructor(numerator:number, denominator:number){
+    this.numerator = numerator;
+    this.denominator = denominator;
+  }
+
+  printRational(){
+    console.log(`${ this.numerator } / ${ this.denominator }`);
+  }
+
+  invert(){
+    [this.numerator, this.denominator] = [this.denominator, this.numerator];
+  }
+
+  toFloat(){
+    console.log( this.numerator / this.denominator );
+  }
+
+  reduce(){
+    let gcd = function gcd(a : number,b : number) : number{
+    return b ? gcd(b, a%b) : a;
+    };
+    let gcd2 = gcd(this.numerator,this.denominator);
+    this.numerator = this.numerator/gcd2;
+    this.denominator = this.denominator/gcd2;
+    // return [this.numerator/gcd2, this.denominator/gcd2];
+  }
+
+}//END class
+~~~
+4. Movies
+~~~
+DONE
+~~~
 - Wedesday 2022-02-08
-1. Duplicate Encoder
+6. Duplicate Encoder
 ~~~
 export function duplicateEncode(word: string){
     return word.toLowerCase()

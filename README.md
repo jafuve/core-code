@@ -7,3 +7,4 @@ Month 01
 - Week03: January, 24th to 28th.  [View Challenges](week-challenges/week03.md)
 - Week04: January, 31st to  February, 4th.  [View Challenges](week-challenges/week04.md)
 - Week05: January, 7th to  February, 11th.  [View Challenges](week-challenges/week05.md)
+- Week06: February, 14th to  February, 18th.  [View Challenges](week-challenges/week06.md)
